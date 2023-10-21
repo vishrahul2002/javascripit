@@ -7,17 +7,17 @@
 
 const mySum = Symbol("key1");
 
-        let JsUser = {
-            name: "Rahul",
-            "full name" : "Rahul Vishwakarma",
-            // using a symbol
-            [mySum] : "myKey1",
-            age: 5,
-            location: "Mumbai",
-            email: "rahul@gmail.com",
-            isLoggedIn: false,
-            lastLoggedinDate : ["Monday", "Satruday"]
-        }
+let JsUser = {
+    name: "Rahul",
+    "full name" : "Rahul Vishwakarma",
+    // using a symbol
+    [mySum] : "myKey1",
+    age: 5,
+    location: "Mumbai",
+    email: "rahul@gmail.com",
+    isLoggedIn: false,
+    lastLoggedinDate : ["Monday", "Satruday"]
+}
 
 // accessing the object 
 
@@ -29,4 +29,18 @@ const mySum = Symbol("key1");
 
 // using a Symbol in an object and accesing them 
 console.log(JsUser[mySum]);
-console.log(typeof JsUser[mySum]);
+// console.log(typeof JsUser[mySum]);
+
+// Learning to manulipate the object actual value
+
+JsUser.name = "Vish" // the value has been changed to vish
+
+console.log(JsUser["name"]);
+
+
+// Freasing the object so that no one can modifiy the value of an actual object
+
+Object.freeze(JsUser) // from here onward JSUser can't be modifiyed
+
+JsUser.name = "Rahul" // here the value of name will not change in the object
+console.log(JsUser);
