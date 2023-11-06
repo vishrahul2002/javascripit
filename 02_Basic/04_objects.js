@@ -64,7 +64,22 @@ const egobj = Object.assign(obj1, obj2);
 
 // syntax when working with Database
 
-console.log(tinderUser);
-console.log(Object.keys(tinderUser)); // here we can extract the keys of the object using Object.values(name)
-console.log(Object.values(tinderUser)); // here we can extract the values of the object using Object.values(name)
-console.log(Object.entries(tinderUser)); // here it will give the key and value pair in the array form
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser)); // here we can extract the keys of the object using Object.values(name)
+// console.log(Object.values(tinderUser)); // here we can extract the values of the object using Object.values(name)
+// console.log(Object.entries(tinderUser)); // here it will give the key and value pair in the array form
+
+// Object Destructuring 
+
+const course = {
+    courseName: "Js in hindi",
+    price: "999",
+    courseInstructure: "Rahul"
+}
+
+// using a syntax for destructuring the object
+// const {courseInstructure} = course;
+// console.log(courseInstructure);
+// if we want to change the name of the name if it is too long for whatever is the reason then we can use again another syntax
+const {courseInstructure: instructure} = course 
+console.log(instructure); // here we have change the name if the courseInstructure to instructure
