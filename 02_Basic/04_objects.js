@@ -83,3 +83,22 @@ const course = {
 // if we want to change the name of the name if it is too long for whatever is the reason then we can use again another syntax
 const {courseInstructure: instructure} = course 
 console.log(instructure); // here we have change the name if the courseInstructure to instructure
+
+
+// api and json
+
+// JSON formate 
+
+{
+    "name": "rahul",
+    "courseName": "Js in hindi"
+    "price": "free"
+}
+
+// another is the array formate 
+
+[
+    {},
+    {},
+    {}
+]
