@@ -29,4 +29,14 @@ function loginUserMessage (userName) {
     return `${userName} just logged in`
 }
 
-console.log(loginUserMessage("rahul"));
+// console.log(loginUserMessage("rahul"));
+// giving the default value to the parameter
+function test (userName = "testEg") {
+    if (!userName) {
+        console.log("Please enter a vaild username");
+        return
+    }
+    return `${userName} just logged in`
+}
+
+console.log(test());
