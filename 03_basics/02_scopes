@@ -1,0 +1,20 @@
+// Global Scope : is the value declare globally it is not inside the function, for loops or if and else
+
+// Block Scope : is the value declare inside the function, if else or inside the { }
+
+
+// eg:
+
+// var is global scope
+// let and const are block scope in js
+let a = "hello"
+var c = "heyy"
+{
+    let a = 100;
+    const b = 200;
+    c = 300;
+}
+
+console.log(a); // here it log "hello" because it is outside the block scope
+// console.log(b); //here it will throw an ReferenceError b is not defined
+console.log(c); // c will log 300 insted of "heyy"as it is an global scope and can be override the previous value
