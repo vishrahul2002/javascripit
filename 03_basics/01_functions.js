@@ -59,3 +59,24 @@ function calculateCartPrice1 (item1, item2, ...item) {
 }
 
 // console.log(calculateCartPrice1(100,200,300,400));
+
+
+// function with object
+const user = {
+    username: "Rahul",
+    price: 500
+}
+
+// Because we don't know from where the object will be comming whethere it will be coming form api or database so we take parameter name anyObject
+function handleObject(anyObject) {
+
+    console.log(`UserName is ${anyObject.username} and the price is ${anyObject.price}`);
+}
+// here we need to pass the actual name of the object then only it can fetch the data of that particular object
+// handleObject(user);
+
+// we can directly access using object
+handleObject({
+    username: "tiyo",
+    price: 399
+})
