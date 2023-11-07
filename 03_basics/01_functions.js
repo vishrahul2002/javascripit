@@ -39,4 +39,23 @@ function test (userName = "testEg") {
     return `${userName} just logged in`
 }
 
-console.log(test());
+// console.log(test());
+
+
+// rest operator
+// if we don't know how many parameter will be present in the function then we can use rest operator
+// here ... is the rest operator and it is also used for sperad operator
+
+// eg: 1
+function calculateCartPrice (...cart) {
+    return cart;
+}
+
+// console.log(calculateCartPrice(100,500,1000));
+
+// eg: 2
+function calculateCartPrice1 (item1, item2, ...item) {
+    return item // here if the val is return then only all the value of the val will be return but it will not reutrn the value of item1 & item2 cuz.
+}
+
+// console.log(calculateCartPrice1(100,200,300,400));
