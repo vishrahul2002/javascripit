@@ -15,6 +15,44 @@ var c = "heyy"
     c = 300;
 }
 
-console.log(a); // here it log "hello" because it is outside the block scope
+// console.log(a); // here it log "hello" because it is outside the block scope
 // console.log(b); //here it will throw an ReferenceError b is not defined
-console.log(c); // c will log 300 insted of "heyy"as it is an global scope and can be override the previous value
+// console.log(c); // c will log 300 insted of "heyy"as it is an global scope and can be override the previous value
+
+
+// scope with function 
+
+function one () {
+    const userName = "Rahul";
+    function two() {
+        const website = "youtube";
+        console.log(userName);
+    }
+    two()
+    // console.log(website); // here it will throw an error because the webiste is inside the two() function
+}
+
+// one()
+
+// scope with if else
+
+// if (true) {
+//     const username = "Rahul"
+//     if (username === "Rahul") {
+//         const webiste = " youtube";
+//         console.log(username + webiste);
+//     }
+//     // console.log(webiste);
+// }
+
+
+console.log(addOne(5)) // we can use the function before writing the logic
+function addOne (num) {
+    return num + 1
+}
+
+
+addTwo(5); // we cannot use function before initialization in this case
+const addTwo = function(num) {
+    return num + 2
+}
