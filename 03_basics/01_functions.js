@@ -80,3 +80,14 @@ handleObject({
     username: "tiyo",
     price: 399
 })
+
+// function with array
+
+const myArray = [100,200,300,400,1000];
+
+function handleArray(anyArray) {
+    return anyArray[1] // accessing the 1st indx of an array value
+}
+
+// console.log(handleArray(myArray));
+console.log(handleArray([100,400,1000]));
