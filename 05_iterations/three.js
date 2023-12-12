@@ -53,6 +53,18 @@ map.set('CN', 'China')
 map.set('USA', 'United State Of America')
 
 // looping throw map
-for (const [key, value] of map) {
-    console.log(key, ":", value);
+// for (const [key, value] of map) {
+//     console.log(key, ":", value);
+// }
+
+//looping throw objects
+const myObj = {
+    "game1": "NFS",
+    "game2": "GTA",
+    "game3": "COD"
+}
+
+// here it will throw an erro as myObj is not iterable
+for (const [key, value] of myObj) {
+    // console.log(`${key} : ${value}`)
 }
