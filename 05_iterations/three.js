@@ -41,6 +41,18 @@ for (const char of greetings) {
     resultString += char
 }
 
-console.log(resultString);
+// console.log(resultString);
 
 
+// Maps
+
+const map = new Map();
+
+map.set('IN', 'India')
+map.set('CN', 'China')
+map.set('USA', 'United State Of America')
+
+// looping throw map
+for (const [key, value] of map) {
+    console.log(key, ":", value);
+}
