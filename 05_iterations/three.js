@@ -14,13 +14,31 @@ for (const num of numbers) {
 //    // console.log(`Value of each char is ${greet}`);
 // }
 
+// removing the whitespace from the string
+
+// let greetings = "Hello World!";
+// let resultString = "";
+
+// for (const char of greetings) {
+//     if (char !== " ") {
+//         resultString += char;
+//     }
+// }
+
+// console.log(resultString);
+
+
+
+// breaking the loop if the whitespace is detected
+
 let greetings = "Hello World!";
 let resultString = "";
 
 for (const char of greetings) {
-    if (char !== " ") {
-        resultString += char
+    if (char === " ") {
+        break
     }
+    resultString += char
 }
 
 console.log(resultString);
