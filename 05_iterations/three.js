@@ -5,7 +5,7 @@
 
 let numbers = [1,2,3,4,5];
 for (const num of numbers) {
-    // console.log(`Value of numbers are ${num}`);   
+    console.log(`Value of numbers are ${num}`);   
 }
 
 // on string
@@ -65,6 +65,6 @@ const myObj = {
 }
 
 // here it will throw an erro as myObj is not iterable
-for (const [key, value] of myObj) {
-    // console.log(`${key} : ${value}`)
-}
+// for (const [key, value] of myObj) {
+//     // console.log(`${key} : ${value}`)
+// }
