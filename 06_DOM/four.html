@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background: #212121; color: #fff">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // normal way to create the function to append the element in the body
+    function addLanguage(langName) {
+        const li = document.createElement("li");
+        li.innerHTML = `${langName}`
+        document.querySelector(".language").appendChild(li)
+    }
+
+    addLanguage('python')
+    addLanguage('typescript')
+
+    // optimize way to create and append the element in the body
+
+    function addOptiLanguage(langName) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptiLanguage("golang")
+</script>
+</html>
