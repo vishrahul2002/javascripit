@@ -44,9 +44,15 @@
     const firstLang = document.querySelector("li:first-child");
     
     const updatedli = document.createElement('li');
-    updatedli.appendChild(document.createElement)
+    updatedli.appendChild(document.createTextNode("lang"))
 
+    // edit
+    const lang = document.querySelector("li:nth-child(3)")
+    lang.outerHTML = "<li>Rust</li>"  // Using outerHTML 
 
+    // removing the element 
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()  // it will remove the last child of the li using the `remove()`
 
 </script>
 </html>
