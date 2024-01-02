@@ -21,13 +21,24 @@
 
 </body>
     <script>
+        // Things to Learn
+
+        // type, timestamp, defalutPrevented
+        // target, toElement, srcElement, currentTarget, 
+        // clientX, clientY, screenX, screenY, offset
+        // altkey, ctrlkey, shiftkey, keyCode
+
+        // 
         // direct on element
         // onclick="alert('hello')"
-        // document.getElementById("owl").addEventListener('click', function() {
-        //     alert('owl clicked')
-        // })
         // jQuery = .on
         // attachEvent()
+        document.getElementById("owl").addEventListener('click', function(e) {
+            console.log(e)
+        }, false)
+
+        
+        
     </script>
 
 </html>
