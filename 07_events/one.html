@@ -33,13 +33,21 @@
         // onclick="alert('hello')"
         // jQuery = .on
         // attachEvent()
-        document.getElementById("images").addEventListener('click', function(e) {
-            console.log('Clicked inside the ul');
-        }, false)
+        // document.getElementById("images").addEventListener('click', function(e) {
+        //     console.log('Clicked inside the ul');
+        // }, false)
 
-        document.getElementById("owl").addEventListener('click', function(e) {
-            console.log('owl clicked') // here it will run first even if it is inside the ul which has it's own click event
-        }, false)
+        // document.getElementById("owl").addEventListener('click', function(e) {
+        //     console.log('owl clicked') // here it will run first even if it is inside the ul which has it's own click event
+        //     e.stopPropagation() // here the event will not go up (learn more with chai and code)
+        // }, false)
+
+        // document.getElementById('google').addEventListener('click', function(e) {
+        //     console.log("google clicked");
+        //     e.preventDefault(); // it will prevent the default behaviour of the event
+        //     e.stopPropagation();
+
+        // }, false)
 
         
         
