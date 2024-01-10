@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+        button {
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <button id="stop">Stop</button>
+    <script>
+        const sayRahul = function() {
+            console.log("Rahul");
+        } 
+        // here giving the reference to the setTimeout
+        // setTimeout(sayRahul, 2000)
+
+        const updatedText = function () {
+            document.querySelector('h1').innerHTML = 'This is the updated heading'
+        }
+
+        const changeText = setTimeout(updatedText, 2000)
+        // here it will remove the setTimeout function's 
+        // clearTimeout(changeText)
+        document.querySelector("#stop")
+        .addEventListener('click', function() {
+            clearTimeout(changeText)
+            console.log('Function Stoped');
+        })
+        
+    </script>
+</body>
+</html>
