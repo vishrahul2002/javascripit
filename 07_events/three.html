@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+        button {
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bit about Js</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        let setIntervalId;
+
+        const sayName = (str) => {
+            console.log(str, Date.now());
+        }
+
+        // Adding Event on start button
+        const start = document.getElementById('start').addEventListener('click', function() {
+            console.log('IntervalId Start');
+            setIntervalId = setInterval(sayName, 1000, 'hi')
+        })
+
+        // Adding Event on stop button
+        const stop = document.getElementById('stop').
+        addEventListener('click', function() {
+            clearInterval(setIntervalId)
+            console.log('IntervalId Stoped');
+        })
+
+        
+
+
+    </script>
+</body>
+</html>
