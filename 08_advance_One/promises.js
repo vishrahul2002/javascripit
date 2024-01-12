@@ -34,3 +34,24 @@ const promiseThree = new Promise(function(resolve, reject) {
 promiseThree.then(function(user) {
     console.log(user);
 })
+
+// 
+
+const promiseFour = new Promise(function(resolve, reject) {
+    let error = false
+    if(!error) {
+        resolve({username: 'rahul', password: '123'})
+    } else {
+        reject("Error: Something went wrong")
+    }
+})
+
+// learning about Chaining
+promiseFour.then((user) => {
+    console.log(user);
+    return user.username
+}).then((username) => {
+    console.log(username);
+}).catch((error) => {
+    console.log(error);
+})
