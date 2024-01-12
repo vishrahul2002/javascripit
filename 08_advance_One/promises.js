@@ -85,17 +85,25 @@ consumePromiseFive()
 
 // fetching data using fetch() method
 
-async function fetchData() {
-    try {
-        const response = await fetch("https://jsonplaceholder.typicode.com/users");
-        // console.log(response)
-        const data = await response.json() // here we have to use the await function because it takes time to convert the data into the json format from string
-        console.log(data);
+// async function fetchData() {
+//     try {
+//         const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//         // console.log(response)
+//         const data = await response.json() // here we have to use the await function because it takes time to convert the data into the json format from string
+//         console.log(data);
 
-    } catch (error) {
-        console.log('E: ', error);
+//     } catch (error) {
+//         console.log('E: ', error);
         
-    }
-}
+//     }
+// }
 
-fetchData()
+// fetchData()
+
+// Using fetch directly
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response) => {
+    return response.json()
+})
+.then((data) => console.log(data))
+.catch((error)=> console.log(error))
