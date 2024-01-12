@@ -38,7 +38,7 @@ promiseThree.then(function(user) {
 // 
 
 const promiseFour = new Promise(function(resolve, reject) {
-    let error = false
+    let error = true
     if(!error) {
         resolve({username: 'rahul', password: '123'})
     } else {
@@ -47,7 +47,8 @@ const promiseFour = new Promise(function(resolve, reject) {
 })
 
 // learning about Chaining
-promiseFour.then((user) => {
+promiseFour
+.then((user) => {
     console.log(user);
     return user.username
 }).then((username) => {
@@ -55,3 +56,5 @@ promiseFour.then((user) => {
 }).catch((error) => {
     console.log(error);
 })
+// finally will always run if the promise is resolve or rejected
+.finally(()=> console.log('Promise either resolve or rejected'))
