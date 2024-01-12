@@ -58,3 +58,27 @@ promiseFour
 })
 // finally will always run if the promise is resolve or rejected
 .finally(()=> console.log('Promise either resolve or rejected'))
+
+//
+const promiseFive = new Promise(function(resolve, reject) {
+    setTimeout(function(){
+        let error = true
+        if(!error) {
+            resolve({username: 'Javascript', password: 123})
+        } else {
+            reject('Error: Js went wrong')
+        }
+    },1000)
+})
+
+async function consumePromiseFive(){
+    try {
+        const response = await promiseFive
+        console.log(response);
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+consumePromiseFive()
