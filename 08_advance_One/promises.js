@@ -82,3 +82,20 @@ async function consumePromiseFive(){
 }
 
 consumePromiseFive()
+
+// fetching data using fetch() method
+
+async function fetchData() {
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+        // console.log(response)
+        const data = await response.json() // here we have to use the await function because it takes time to convert the data into the json format from string
+        console.log(data);
+
+    } catch (error) {
+        console.log('E: ', error);
+        
+    }
+}
+
+fetchData()
