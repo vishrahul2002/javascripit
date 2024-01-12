@@ -38,12 +38,14 @@ promiseThree.then(function(user) {
 // 
 
 const promiseFour = new Promise(function(resolve, reject) {
-    let error = true
+    setTimeout(() => {
+        let error = true
     if(!error) {
         resolve({username: 'rahul', password: '123'})
     } else {
         reject("Error: Something went wrong")
     }
+    }, 1000);
 })
 
 // learning about Chaining
@@ -101,7 +103,7 @@ consumePromiseFive()
 // fetchData()
 
 // Using fetch directly
-fetch('https://jsonplaceholder.typicode.com/users')
+fetch('https://api.github.com/users/hiteshchoudhary')
 .then((response) => {
     return response.json()
 })
