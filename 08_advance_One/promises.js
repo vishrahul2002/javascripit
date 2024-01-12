@@ -12,3 +12,13 @@ const promiseOne = new Promise(function(resolve, reject) {
 promiseOne.then(() => {
     console.log('Promise Consumed');
 }) 
+
+// Creating a Promise without any variable and using it directly
+new Promise(function(resolve, reject){
+    setTimeout(() => {
+        console.log('Async Task 2');
+        resolve()
+    }, 1000);
+}).then(function(){
+    console.log('Async Task 2 Resovled');
+})
