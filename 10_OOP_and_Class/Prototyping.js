@@ -20,7 +20,7 @@ function createUser (username, score) {
 
 // here we are creating a new prototype by ourself and it can be access by the function
 createUser.prototype.increament = function () {
-    this.score++
+    return this.score++ // returing the value of the score using the current context with this keywork.
 }
 
 // creating an another prototype method
@@ -37,3 +37,5 @@ const userTwo = new createUser('rahul', 50)
 // console.log(userTwo);
 
 userOne.price() // 
+
+console.log(userTwo.increament())
