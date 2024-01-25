@@ -8,9 +8,9 @@ function multiplyBy5 (num) {
 
 multiplyBy5.power = 2;
 
-console.log(multiplyBy5(5));
-console.log(multiplyBy5.power); // here it is also having the power of 2 as we have assigned
-console.log(multiplyBy5.prototype);
+// console.log(multiplyBy5(5));
+// console.log(multiplyBy5.power); // here it is also having the power of 2 as we have assigned
+// console.log(multiplyBy5.prototype);
 
 
 function createUser (username, score) {
@@ -21,6 +21,7 @@ function createUser (username, score) {
 // here we are creating a new prototype by ourself and it can be access by the function
 createUser.prototype.increament = function () {
     return this.score++ // returing the value of the score using the current context with this keywork.
+    
 }
 
 // creating an another prototype method
