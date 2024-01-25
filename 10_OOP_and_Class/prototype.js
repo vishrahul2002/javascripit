@@ -45,3 +45,8 @@ const TASupport = {
 }
 TASupport.__proto__ = Teacher
 console.log(TASupport.makeVidoe)
+
+// Moreden Syntax
+Object.setPrototypeOf(TASupport, TeachingSupport)
+
+TASupport.isAvailable
