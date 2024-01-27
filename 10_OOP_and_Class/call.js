@@ -5,6 +5,7 @@ function setUsername(username) {
 }
 
 function createUsername(username, email, pass) {
+    // here we are using call and this to give reference to the setUsername
     setUsername.call(this, username);
     this.email = email,
     this.pass = pass;
