@@ -16,4 +16,5 @@ String.prototype.truelength = function() {
 // username.truelength() // here it is taking a reference of username value using this keyword
 
 'rahul  '.truelength()
+'this is it   '.truelength()
 'heyrahul'.truelength()
