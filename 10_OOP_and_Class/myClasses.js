@@ -2,7 +2,7 @@
 
 // creating a class
 // class User {
-//     //NOTE:  when enver we use new key word the constructor will be called automatically 
+//     //NOTE:  when ever time we use new key word the constructor will be called automatically 
 //     constructor(username, email, password) {
 //         this.username = username;
 //         this.email = email;
@@ -36,6 +36,7 @@ function User (username, email, password) {
 // Because the function is also an Object we can use the prototype with the function 
 
 User.prototype.encryptPassword = function () {
+    // some complex calculation to encrypt password.
     return `${this.password}abc`
 }
 User.prototype.changeUsername = function () {
